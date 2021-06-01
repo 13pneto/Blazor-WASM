@@ -1,0 +1,79 @@
+﻿@page "/tarefas"
+@using Blazor_WebAssembly1.Entities
+@inject HttpClient http
+
+<h3>Tarefas</h3>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Ações</th>
+            <th scope="col">Data</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Concluida</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in tarefas)
+        {
+        <tr>
+            <td>
+                <button @onclick="@(() => RemoveTarefa(item.ID))">
+                    <i class="oi oi-trash"></i>
+                </button>
+            </td>
+            <td>@item.DataCriacao</td>
+            <td>@item.Descricao</td>
+            <td><input type="checkbox" @bind="@item.Concluida" />@item.Concluida</td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+@if (tarefas != null)
+{
+        <div class="form-group">
+            <label>Tarefa</label>
+            <input type="text" placeholder="Informe a tarefa" @bind="novaTarefa">
+            <button class="btn btn-primary" @onclick="AdicionarNovaTarefa">Adicionar</button>
+        </div>
+}
+
+
+
+@code {
+
+    protected override async Task OnInitializedAsync()
+    {
+        tarefas = await http.GetFromJsonAsync<List<Tarefa>>("dados/tarefas.json");
+    }
+
+
+    private List<Tarefa> tarefas = new List<Tarefa>();
+    private string novaTarefa;
+
+    private void AdicionarNovaTarefa()
+    {
+        if(!VerificaTarefaJaExiste(novaTarefa) && !String.IsNullOrWhiteSpace(novaTarefa)) {
+            Tarefa tarefa = new Tarefa();
+            tarefa.Concluida = false;
+            tarefa.DataCriacao = DateTime.Now;
+            tarefa.Descricao = novaTarefa;
+
+            tarefas.Add(tarefa);
+            novaTarefa = "";
+        }
+    }
+
+    private void RemoveTarefa(Guid id)
+    {
+        tarefas.Remove(tarefas.First(t => t.ID == id));
+    }
+
+    private bool VerificaTarefaJaExiste(string tarefaDescricao)
+    {
+        Tarefa t = tarefas.Find(e => e.Descricao.Equals(tarefaDescricao, StringComparison.CurrentCultureIgnoreCase));
+        Console.WriteLine(t == null ? false : true);
+        return t == null ? false : true;
+    }
+}

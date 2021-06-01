@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace Blazor_WebAssembly1.Shared
+namespace Blazor_WebAssembly1.Pages
 {
     #line hidden
     using System;
@@ -82,7 +82,15 @@ using Blazor_WebAssembly1.Shared;
 #line default
 #line hidden
 #nullable disable
-    public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 2 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Pages\Tarefas.razor"
+using Blazor_WebAssembly1.Entities;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/tarefas")]
+    public partial class Tarefas : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -90,20 +98,47 @@ using Blazor_WebAssembly1.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 38 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Shared\NavMenu.razor"
+#line 44 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Pages\Tarefas.razor"
        
-    private bool collapseNavMenu = true;
 
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
+    protected override async Task OnInitializedAsync()
     {
-        collapseNavMenu = !collapseNavMenu;
+        tarefas = await http.GetFromJsonAsync<List<Tarefa>>("dados/tarefas.json");
+    }
+
+
+    private List<Tarefa> tarefas = new List<Tarefa>();
+    private string novaTarefa;
+
+    private void AdicionarNovaTarefa()
+    {
+        if(!VerificaTarefaJaExiste(novaTarefa) && !String.IsNullOrWhiteSpace(novaTarefa)) {
+            Tarefa tarefa = new Tarefa();
+            tarefa.Concluida = false;
+            tarefa.DataCriacao = DateTime.Now;
+            tarefa.Descricao = novaTarefa;
+
+            tarefas.Add(tarefa);
+            novaTarefa = "";
+        }
+    }
+
+    private void RemoveTarefa(Guid id)
+    {
+        tarefas.Remove(tarefas.First(t => t.ID == id));
+    }
+
+    private bool VerificaTarefaJaExiste(string tarefaDescricao)
+    {
+        Tarefa t = tarefas.Find(e => e.Descricao.Equals(tarefaDescricao, StringComparison.CurrentCultureIgnoreCase));
+        Console.WriteLine(t == null ? false : true);
+        return t == null ? false : true;
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient http { get; set; }
     }
 }
 #pragma warning restore 1591
