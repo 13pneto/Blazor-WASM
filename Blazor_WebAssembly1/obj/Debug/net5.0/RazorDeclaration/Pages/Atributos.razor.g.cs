@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace Blazor_WebAssembly1.Shared
+namespace Blazor_WebAssembly1.Pages
 {
     #line hidden
     using System;
@@ -82,7 +82,8 @@ using Blazor_WebAssembly1.Shared;
 #line default
 #line hidden
 #nullable disable
-    public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/atributos")]
+    public partial class Atributos : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -90,16 +91,16 @@ using Blazor_WebAssembly1.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 33 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Shared\NavMenu.razor"
+#line 18 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Pages\Atributos.razor"
        
-    private bool collapseNavMenu = true;
 
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+    public bool Estado { get; set; }
 
-    private void ToggleNavMenu()
+    private void AlteraEstado()
     {
-        collapseNavMenu = !collapseNavMenu;
+        Estado = !Estado;
     }
+
 
 #line default
 #line hidden
