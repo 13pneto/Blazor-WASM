@@ -3,9 +3,11 @@
     @Mensagem
 </div>
 
+@ChildContent
 
 @code {
 
     [Parameter] public string Mensagem { get; set; }
     [Parameter] public string TipoAlerta{ get; set; }
+    [Parameter] public RenderFragment ChildContent { get; set; }
 }

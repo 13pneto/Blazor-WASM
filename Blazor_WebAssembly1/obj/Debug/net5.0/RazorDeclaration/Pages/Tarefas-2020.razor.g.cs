@@ -105,7 +105,7 @@ using Blazor_WebAssembly1.Entities;
 
     protected override async Task OnInitializedAsync()
     {
-        tarefas = await http.GetFromJsonAsync<List<Tarefa>>("dados/tarefas.json");
+        tarefas = await http.GetFromJsonAsync<List<Tarefa>>("dados/tarefas2.json");
     }
 
     private List<Tarefa> GetTarefas()
