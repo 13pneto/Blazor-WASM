@@ -1,19 +1,20 @@
-﻿@inject HttpClient http
-@page "/tarefas"
+﻿@page "/tarefas"
+@using Blazor_WebAssembly1.Repositories
+@inject IRepository repository
 
-<Tarefas tarefas="GetTarefas()" Titulo="Tarefas-2020" ></Tarefas>
+<Tarefas tarefas="GetTarefas()" Titulo="Tarefas-2020"></Tarefas>
 
 @code {
 
     private List<Tarefa> tarefas = new List<Tarefa>();
 
-    protected override async Task OnInitializedAsync()
+    protected override void OnInitialized()
     {
-        tarefas = await http.GetFromJsonAsync<List<Tarefa>>("dados/tarefas2.json");
+        tarefas = repository.GetTarefas();
     }
 
     private List<Tarefa> GetTarefas()
     {
         return tarefas;
-    } 
+    }
 }

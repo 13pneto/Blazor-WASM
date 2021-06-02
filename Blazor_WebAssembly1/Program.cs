@@ -8,6 +8,7 @@ using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
 using Blazor_WebAssembly1.Services;
+using Blazor_WebAssembly1.Repositories;
 
 namespace Blazor_WebAssembly1
 {
@@ -22,7 +23,10 @@ namespace Blazor_WebAssembly1
             builder.Services.AddSingleton<Singleton>();
             builder.Services.AddScoped<Scoped>();
             builder.Services.AddTransient<Transient>();
-           
+            
+            
+            builder.Services.AddScoped<IRepository, Repository>();
+
             await builder.Build().RunAsync();
         }
     }

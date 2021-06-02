@@ -89,6 +89,13 @@ using Blazor_WebAssembly1.Entities;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 2 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Pages\Tarefas-2020.razor"
+using Blazor_WebAssembly1.Repositories;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/tarefas")]
     public partial class Tarefas_2020 : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -98,25 +105,25 @@ using Blazor_WebAssembly1.Entities;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 6 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Pages\Tarefas-2020.razor"
+#line 7 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Pages\Tarefas-2020.razor"
        
 
     private List<Tarefa> tarefas = new List<Tarefa>();
 
-    protected override async Task OnInitializedAsync()
+    protected override void OnInitialized()
     {
-        tarefas = await http.GetFromJsonAsync<List<Tarefa>>("dados/tarefas2.json");
+        tarefas = repository.GetTarefas();
     }
 
     private List<Tarefa> GetTarefas()
     {
         return tarefas;
-    } 
+    }
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient http { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IRepository repository { get; set; }
     }
 }
 #pragma warning restore 1591
