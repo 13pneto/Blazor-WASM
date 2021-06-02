@@ -89,6 +89,13 @@ using Blazor_WebAssembly1.Entities;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 3 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Pages\EventKeyPress.razor"
+using Newtonsoft.Json;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/event-key-press")]
     public partial class EventKeyPress : Microsoft.AspNetCore.Components.ComponentBase
     {
@@ -98,8 +105,8 @@ using Blazor_WebAssembly1.Entities;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 11 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Pages\EventKeyPress.razor"
-             
+#line 15 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Pages\EventKeyPress.razor"
+       
 
     public class CorXkey
     {
@@ -114,17 +121,22 @@ using Blazor_WebAssembly1.Entities;
     protected override async Task OnInitializedAsync()
     {
         CorXkeyList = await http.GetFromJsonAsync<List<CorXkey>>("dados/cores-key-binding.json");
-        Console.WriteLine(CorXkeyList);
+        Console.WriteLine(JsonConvert.SerializeObject(CorXkeyList));
     }
- 
+
 
     private void teclaPressionada(KeyboardEventArgs args)
     {
         CorXkey corXKey = CorXkeyList.Find(e => e.tecla == args.Key);
 
-        Console.WriteLine("Encontrado -->" + corXKey);
-        
+        Console.WriteLine("Encontrado -->" + corXKey );
+
         cor = corXKey.cor;
+    }
+
+    private void mousePositiion(MouseEventArgs args)
+    {
+        Console.WriteLine(JsonConvert.SerializeObject(args));
     }
 
 #line default

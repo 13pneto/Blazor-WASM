@@ -1,14 +1,18 @@
 ﻿@page "/event-key-press"
 @inject HttpClient http
+@using Newtonsoft.Json 
+
 
 <h3>EventKeyPress</h3>
 
 
 <div style="width: 100px; height: 100px; background-color: @cor;"></div>
 
-<input @onkeypress="@(e => teclaPressionada(e))"/>
+<div style="width: 500px; height: 500px; background-color: @cor;" @onmousemove="@(e => mousePositiion(e))"></div>
 
-@code {      
+<input @onkeypress="@(e => teclaPressionada(e))" />
+
+@code {
 
     public class CorXkey
     {
@@ -23,16 +27,21 @@
     protected override async Task OnInitializedAsync()
     {
         CorXkeyList = await http.GetFromJsonAsync<List<CorXkey>>("dados/cores-key-binding.json");
-        Console.WriteLine(CorXkeyList);
+        Console.WriteLine(JsonConvert.SerializeObject(CorXkeyList));
     }
- 
+
 
     private void teclaPressionada(KeyboardEventArgs args)
     {
         CorXkey corXKey = CorXkeyList.Find(e => e.tecla == args.Key);
 
-        Console.WriteLine("Encontrado -->" + corXKey);
-        
+        Console.WriteLine("Encontrado -->" + corXKey );
+
         cor = corXKey.cor;
+    }
+
+    private void mousePositiion(MouseEventArgs args)
+    {
+        Console.WriteLine(JsonConvert.SerializeObject(args));
     }
 }
