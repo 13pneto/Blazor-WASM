@@ -97,12 +97,13 @@ using Blazor_WebAssembly1.Entities;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 8 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Shared\Alerta.razor"
+#line 16 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Shared\Alerta.razor"
        
 
     [Parameter] public string Mensagem { get; set; }
-    [Parameter] public string TipoAlerta{ get; set; }
-    [Parameter] public RenderFragment ChildContent { get; set; }
+    [Parameter] public string TipoAlerta { get; set; }
+    [Parameter] public RenderFragment ChildContent1 { get; set; }
+    [Parameter] public RenderFragment ChildContent2 { get; set; }
 
 #line default
 #line hidden

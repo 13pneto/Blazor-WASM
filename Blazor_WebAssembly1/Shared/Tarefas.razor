@@ -4,18 +4,8 @@
 @if (!tarefas.Any())
 {
 <Alerta Mensagem="Erro ao consultar tarefas" TipoAlerta="alert alert-danger">
-    <div class="card" style="width: 18rem;">
-        <img class="card-img-top" src="https://semantic-ui.com/images/wireframe/image.png" alt="Card image cap">
-        <div class="card-body">
-            <h5 class="card-title">Não há tarefas cadastradas.</h5>
-            <p class="card-text">Após cadastrar tarefas, elas serão apresentadas. Favor cadastrar uma tarefa.</p>
-        </div>
-    </div>
-</Alerta>
-}
-else if (tarefas == null)
-{
-    <Alerta Mensagem="Ainda não há tarefas cadastradas" TipoAlerta="alert alert-danger">
+    <ChildContent1>
+        <b style="font-size:30px">ChildContent 1</b>
         <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="https://semantic-ui.com/images/wireframe/image.png" alt="Card image cap">
             <div class="card-body">
@@ -23,7 +13,28 @@ else if (tarefas == null)
                 <p class="card-text">Após cadastrar tarefas, elas serão apresentadas. Favor cadastrar uma tarefa.</p>
             </div>
         </div>
-    </Alerta>
+    </ChildContent1>
+    <ChildContent2>
+       <b style="font-size:30px">ChildContent 2</b>
+    </ChildContent2>
+</Alerta>
+}
+else if (tarefas == null)
+{
+<Alerta Mensagem="Ainda não há tarefas cadastradas" TipoAlerta="alert alert-danger">
+    <ChildContent1>
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="https://semantic-ui.com/images/wireframe/image.png" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">Não há tarefas cadastradas.</h5>
+                <p class="card-text">Após cadastrar tarefas, elas serão apresentadas. Favor cadastrar uma tarefa.</p>
+            </div>
+        </div>
+    </ChildContent1>
+    <ChildContent2>
+        <b>ChildContent2</b>
+    </ChildContent2>
+</Alerta>
 }
 
 <table class="table">

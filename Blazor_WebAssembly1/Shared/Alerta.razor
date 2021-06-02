@@ -3,11 +3,20 @@
     @Mensagem
 </div>
 
-@ChildContent
+@ChildContent1
+
+<br />
+<br />
+<hr />
+<br />
+<br />
+
+@ChildContent2
 
 @code {
 
     [Parameter] public string Mensagem { get; set; }
-    [Parameter] public string TipoAlerta{ get; set; }
-    [Parameter] public RenderFragment ChildContent { get; set; }
+    [Parameter] public string TipoAlerta { get; set; }
+    [Parameter] public RenderFragment ChildContent1 { get; set; }
+    [Parameter] public RenderFragment ChildContent2 { get; set; }
 }
