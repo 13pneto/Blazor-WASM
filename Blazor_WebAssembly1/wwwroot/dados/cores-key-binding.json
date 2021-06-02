@@ -1,0 +1,42 @@
+[
+  {
+    "cor": "white",
+    "tecla": "A"
+  },
+  {
+    "cor": "black",
+    "tecla": "B"
+  },
+  {
+    "cor": "cyan",
+    "tecla": "C"
+  },
+  {
+    "cor": "green",
+    "tecla": "D"
+  },
+  {
+    "cor": "purple",
+    "tecla": "E"
+  },
+  {
+    "cor": "violet",
+    "tecla": "F"
+  },
+  {
+    "cor": "pink",
+    "tecla": "G"
+  },
+  {
+    "cor": "silver",
+    "tecla": "H"
+  },
+  {
+    "cor": "brown",
+    "tecla": "I"
+  },
+  {
+    "cor": "azul",
+    "tecla": "J"
+  }
+]

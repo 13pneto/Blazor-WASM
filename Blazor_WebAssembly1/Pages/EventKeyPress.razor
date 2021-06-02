@@ -1,0 +1,38 @@
+﻿@page "/event-key-press"
+@inject HttpClient http
+
+<h3>EventKeyPress</h3>
+
+
+<div style="width: 100px; height: 100px; background-color: @cor;"></div>
+
+<input @onkeypress="@(e => teclaPressionada(e))"/>
+
+@code {      
+
+    public class CorXkey
+    {
+        public string cor { get; set; }
+        public string tecla { get; set; }
+    }
+
+    private List<CorXkey> CorXkeyList = new List<CorXkey>();
+    private string cor { get; set; } = "blue";
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        CorXkeyList = await http.GetFromJsonAsync<List<CorXkey>>("dados/cores-key-binding.json");
+        Console.WriteLine(CorXkeyList);
+    }
+ 
+
+    private void teclaPressionada(KeyboardEventArgs args)
+    {
+        CorXkey corXKey = CorXkeyList.Find(e => e.tecla == args.Key);
+
+        Console.WriteLine("Encontrado -->" + corXKey);
+        
+        cor = corXKey.cor;
+    }
+}

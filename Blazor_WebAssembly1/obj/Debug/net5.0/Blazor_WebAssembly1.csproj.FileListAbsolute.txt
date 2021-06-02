@@ -640,3 +640,5 @@ C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\obj\Debug\ne
 C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\obj\Debug\net5.0\Blazor_WebAssembly1.csproj.AssemblyReference.cache
 C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\obj\Debug\net5.0\RazorDeclaration\Pages\DataBindingEvent.razor.g.cs
 C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\obj\Debug\net5.0\Razor\Pages\DataBindingEvent.razor.g.cs
+C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\obj\Debug\net5.0\RazorDeclaration\Pages\EventKeyPress.razor.g.cs
+C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\obj\Debug\net5.0\Razor\Pages\EventKeyPress.razor.g.cs

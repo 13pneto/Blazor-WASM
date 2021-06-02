@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace Blazor_WebAssembly1.Shared
+namespace Blazor_WebAssembly1.Pages
 {
     #line hidden
     using System;
@@ -89,7 +89,8 @@ using Blazor_WebAssembly1.Entities;
 #line default
 #line hidden
 #nullable disable
-    public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/event-key-press")]
+    public partial class EventKeyPress : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -97,20 +98,39 @@ using Blazor_WebAssembly1.Entities;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 48 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Shared\NavMenu.razor"
-       
-    private bool collapseNavMenu = true;
+#line 11 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Pages\EventKeyPress.razor"
+             
 
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
-
-    private void ToggleNavMenu()
+    public class CorXkey
     {
-        collapseNavMenu = !collapseNavMenu;
+        public string cor { get; set; }
+        public string tecla { get; set; }
+    }
+
+    private List<CorXkey> CorXkeyList = new List<CorXkey>();
+    private string cor { get; set; } = "blue";
+
+
+    protected override async Task OnInitializedAsync()
+    {
+        CorXkeyList = await http.GetFromJsonAsync<List<CorXkey>>("dados/cores-key-binding.json");
+        Console.WriteLine(CorXkeyList);
+    }
+ 
+
+    private void teclaPressionada(KeyboardEventArgs args)
+    {
+        CorXkey corXKey = CorXkeyList.Find(e => e.tecla == args.Key);
+
+        Console.WriteLine("Encontrado -->" + corXKey);
+        
+        cor = corXKey.cor;
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient http { get; set; }
     }
 }
 #pragma warning restore 1591
