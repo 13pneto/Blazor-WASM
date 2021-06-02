@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace Blazor_WebAssembly1.Pages
+namespace Blazor_WebAssembly1.Shared
 {
     #line hidden
     using System;
@@ -89,8 +89,7 @@ using Blazor_WebAssembly1.Entities;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.RouteAttribute("/fetchdata")]
-    public partial class FetchData : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class Tarefas : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -98,30 +97,44 @@ using Blazor_WebAssembly1.Entities;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 37 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Pages\FetchData.razor"
+#line 50 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Shared\Tarefas.razor"
        
-    private WeatherForecast[] forecasts;
 
-    protected override async Task OnInitializedAsync()
+
+    [Parameter] public string Titulo { get; set; } = "Tarefas";
+    [Parameter] public List<Tarefa> tarefas { get; set; }
+
+    private string novaTarefa;
+
+    private void AdicionarNovaTarefa()
     {
-        forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("sample-data/weather.json");
+        if (!VerificaTarefaJaExiste(novaTarefa) && !String.IsNullOrWhiteSpace(novaTarefa))
+        {
+            Tarefa tarefa = new Tarefa();
+            tarefa.Concluida = false;
+            tarefa.DataCriacao = DateTime.Now;
+            tarefa.Descricao = novaTarefa;
+
+            tarefas.Add(tarefa);
+            novaTarefa = "";
+        }
     }
 
-    public class WeatherForecast
+    private void RemoveTarefa(Guid id)
     {
-        public DateTime Date { get; set; }
+        tarefas.Remove(tarefas.First(t => t.ID == id));
+    }
 
-        public int TemperatureC { get; set; }
-
-        public string Summary { get; set; }
-
-        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
+    private bool VerificaTarefaJaExiste(string tarefaDescricao)
+    {
+        Tarefa t = tarefas.Find(e => e.Descricao.Equals(tarefaDescricao, StringComparison.CurrentCultureIgnoreCase));
+        Console.WriteLine(t == null ? false : true);
+        return t == null ? false : true;
     }
 
 #line default
 #line hidden
 #nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private HttpClient Http { get; set; }
     }
 }
 #pragma warning restore 1591

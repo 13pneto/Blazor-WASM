@@ -11,9 +11,5 @@ namespace Blazor_WebAssembly1.Entities
         public string Descricao { get; set; }
         public bool Concluida { get; set; }
         public DateTime DataCriacao { get; set; }
-
-        public Tarefa()
-        {
-        }
     }
 }

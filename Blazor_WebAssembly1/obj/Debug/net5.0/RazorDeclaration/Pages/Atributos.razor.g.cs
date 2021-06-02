@@ -82,6 +82,13 @@ using Blazor_WebAssembly1.Shared;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 14 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\_Imports.razor"
+using Blazor_WebAssembly1.Entities;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/atributos")]
     public partial class Atributos : Microsoft.AspNetCore.Components.ComponentBase
     {

@@ -1,0 +1,83 @@
+﻿
+<h3>@Titulo</h3>
+
+@if (!tarefas.Any())
+{
+    <Alerta Mensagem="Erro ao consultar tarefas" TipoAlerta="alert alert-danger"></Alerta>
+}
+else if (tarefas == null)
+{
+    <Alerta Mensagem="Ainda não há tarefas cadastradas" TipoAlerta="alert alert-danger"></Alerta>
+}
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Ações</th>
+            <th scope="col">Data</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Concluida</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in tarefas)
+        {
+            <tr>
+                <td>
+                    <button @onclick="@(() => RemoveTarefa(item.ID))">
+                        <i class="oi oi-trash"></i>
+                    </button>
+                </td>
+                <td>@item.DataCriacao</td>
+                <td>@item.Descricao</td>
+                <td><input type="checkbox" @bind="@item.Concluida" />@item.Concluida</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@if (tarefas != null)
+{
+    <div class="form-group">
+        <label>Tarefa</label>
+        <input type="text" placeholder="Informe a tarefa" @bind="novaTarefa">
+        <button class="btn btn-primary" @onclick="AdicionarNovaTarefa">Adicionar</button>
+    </div>
+}
+
+
+
+@code {
+
+
+    [Parameter] public string Titulo { get; set; } = "Tarefas";
+    [Parameter] public List<Tarefa> tarefas { get; set; }
+
+    private string novaTarefa;
+
+    private void AdicionarNovaTarefa()
+    {
+        if (!VerificaTarefaJaExiste(novaTarefa) && !String.IsNullOrWhiteSpace(novaTarefa))
+        {
+            Tarefa tarefa = new Tarefa();
+            tarefa.Concluida = false;
+            tarefa.DataCriacao = DateTime.Now;
+            tarefa.Descricao = novaTarefa;
+
+            tarefas.Add(tarefa);
+            novaTarefa = "";
+        }
+    }
+
+    private void RemoveTarefa(Guid id)
+    {
+        tarefas.Remove(tarefas.First(t => t.ID == id));
+    }
+
+    private bool VerificaTarefaJaExiste(string tarefaDescricao)
+    {
+        Tarefa t = tarefas.Find(e => e.Descricao.Equals(tarefaDescricao, StringComparison.CurrentCultureIgnoreCase));
+        Console.WriteLine(t == null ? false : true);
+        return t == null ? false : true;
+    }
+}
