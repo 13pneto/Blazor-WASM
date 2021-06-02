@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace Blazor_WebAssembly1.Shared
+namespace Blazor_WebAssembly1.Pages
 {
     #line hidden
     using System;
@@ -89,7 +89,15 @@ using Blazor_WebAssembly1.Entities;
 #line default
 #line hidden
 #nullable disable
-    public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 2 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Pages\DI.razor"
+using Blazor_WebAssembly1.Services;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/di")]
+    public partial class DI : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -97,20 +105,26 @@ using Blazor_WebAssembly1.Entities;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 58 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Shared\NavMenu.razor"
+#line 17 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Pages\DI.razor"
        
-    private bool collapseNavMenu = true;
 
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
 
-    private void ToggleNavMenu()
+    public int count { get; set; }
+
+    public void Increment()
     {
-        collapseNavMenu = !collapseNavMenu;
+        count++;
+        singleton.Valor = count;
+        scoped.Valor = count;
+        transient.Valor = count;
     }
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private Transient transient { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private Scoped scoped { get; set; }
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private Singleton singleton { get; set; }
     }
 }
 #pragma warning restore 1591

@@ -7,6 +7,7 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Threading.Tasks;
+using Blazor_WebAssembly1.Services;
 
 namespace Blazor_WebAssembly1
 {
@@ -18,7 +19,10 @@ namespace Blazor_WebAssembly1
             builder.RootComponents.Add<App>("#app");
 
             builder.Services.AddScoped(sp => new HttpClient { BaseAddress = new Uri(builder.HostEnvironment.BaseAddress) });
-
+            builder.Services.AddSingleton<Singleton>();
+            builder.Services.AddScoped<Scoped>();
+            builder.Services.AddTransient<Transient>();
+           
             await builder.Build().RunAsync();
         }
     }

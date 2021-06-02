@@ -649,3 +649,5 @@ C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\obj\Debug\ne
 C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\obj\Debug\net5.0\Razor\Shared\TarefaIndividual.razor.g.cs
 C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\obj\Debug\net5.0\RazorDeclaration\Pages\LifeCycle.razor.g.cs
 C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\obj\Debug\net5.0\Razor\Pages\LifeCycle.razor.g.cs
+C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\obj\Debug\net5.0\RazorDeclaration\Pages\DI.razor.g.cs
+C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\obj\Debug\net5.0\Razor\Pages\DI.razor.g.cs

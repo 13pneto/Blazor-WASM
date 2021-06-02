@@ -1,0 +1,29 @@
+﻿@page "/di"
+@using Blazor_WebAssembly1.Services
+
+@inject Singleton singleton
+@inject Scoped scoped
+@inject Transient transient
+
+<h3>DI</h3>
+
+<p>Singleton count: @singleton.Valor</p>
+
+<p>Scoped count: @scoped.Valor</p>
+
+<p>Transient count: @transient.Valor</p>
+
+<button class="btn btn-primary" @onclick="Increment">Increment</button>
+@code {
+
+
+    public int count { get; set; }
+
+    public void Increment()
+    {
+        count++;
+        singleton.Valor = count;
+        scoped.Valor = count;
+        transient.Valor = count;
+    }
+}
