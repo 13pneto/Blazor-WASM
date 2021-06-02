@@ -1,0 +1,38 @@
+﻿@page "/life-cycle"
+@implements IDisposable
+
+<h3>LifeCycle</h3>
+
+
+
+
+@code {
+
+    public string Titutlo { get; set; }
+    public DateTime Renderizado { get; set; }
+
+    protected override void OnInitialized()
+    {
+        Renderizado = DateTime.UtcNow;
+        Console.WriteLine($"OnInitialized --> {Renderizado}");
+    }
+
+    protected override void OnParametersSet()
+    {
+        Renderizado = DateTime.UtcNow;
+        Console.WriteLine($"OnParametersSet --> {Renderizado}");
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        Renderizado = DateTime.UtcNow;
+        Console.WriteLine($"OnAfterRender --> {Renderizado}");
+    }
+
+    public void Dispose()
+    {
+        Renderizado = DateTime.UtcNow;
+        Console.WriteLine($"Dispose --> {Renderizado}");
+    }
+
+}
