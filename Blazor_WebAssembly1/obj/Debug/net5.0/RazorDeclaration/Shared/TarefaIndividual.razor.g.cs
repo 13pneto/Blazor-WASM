@@ -89,7 +89,14 @@ using Blazor_WebAssembly1.Entities;
 #line default
 #line hidden
 #nullable disable
-    public partial class Tarefas : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 1 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Shared\TarefaIndividual.razor"
+using Newtonsoft.Json;
+
+#line default
+#line hidden
+#nullable disable
+    public partial class TarefaIndividual : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -97,40 +104,10 @@ using Blazor_WebAssembly1.Entities;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 43 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Shared\Tarefas.razor"
+#line 15 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Shared\TarefaIndividual.razor"
        
-
-
-    [Parameter] public string Titulo { get; set; } = "Tarefas";
-    [Parameter] public List<Tarefa> tarefas { get; set; }
-
-    private string novaTarefa;
-
-    private void AdicionarNovaTarefa()
-    {
-        if (!VerificaTarefaJaExiste(novaTarefa) && !String.IsNullOrWhiteSpace(novaTarefa))
-        {
-            Tarefa tarefa = new Tarefa();
-            tarefa.Concluida = false;
-            tarefa.DataCriacao = DateTime.Now;
-            tarefa.Descricao = novaTarefa;
-
-            tarefas.Add(tarefa);
-            novaTarefa = "";
-        }
-    }
-
-    private void RemoveTarefa(Tarefa tarefa)
-    {
-        tarefas.Remove(tarefa);
-    }
-
-    private bool VerificaTarefaJaExiste(string tarefaDescricao)
-    {
-        Tarefa t = tarefas.Find(e => e.Descricao.Equals(tarefaDescricao, StringComparison.CurrentCultureIgnoreCase));
-        Console.WriteLine(t == null ? false : true);
-        return t == null ? false : true;
-    }
+    [Parameter] public Tarefa item { get; set; }
+    [Parameter] public EventCallback<Tarefa> RemoverTarefa { get; set; }
 
 #line default
 #line hidden

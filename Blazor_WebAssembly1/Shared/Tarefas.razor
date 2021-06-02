@@ -23,14 +23,7 @@ else if (tarefas == null)
         @foreach (var item in tarefas)
         {
             <tr>
-                <td>
-                    <button @onclick="@(() => RemoveTarefa(item.ID))">
-                        <i class="oi oi-trash"></i>
-                    </button>
-                </td>
-                <td>@item.DataCriacao</td>
-                <td>@item.Descricao</td>
-                <td><input type="checkbox" @bind="@item.Concluida" />@item.Concluida</td>
+                <TarefaIndividual item="item" RemoverTarefa="RemoveTarefa"></TarefaIndividual>
             </tr>
         }
     </tbody>
@@ -69,9 +62,9 @@ else if (tarefas == null)
         }
     }
 
-    private void RemoveTarefa(Guid id)
+    private void RemoveTarefa(Tarefa tarefa)
     {
-        tarefas.Remove(tarefas.First(t => t.ID == id));
+        tarefas.Remove(tarefa);
     }
 
     private bool VerificaTarefaJaExiste(string tarefaDescricao)

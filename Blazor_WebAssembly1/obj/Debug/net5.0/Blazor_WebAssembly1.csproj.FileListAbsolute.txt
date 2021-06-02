@@ -645,3 +645,5 @@ C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\obj\Debug\ne
 C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\bin\Debug\net5.0\wwwroot\_framework\Newtonsoft.Json.dll.gz
 C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\bin\Debug\net5.0\wwwroot\_framework\Newtonsoft.Json.dll
 C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\obj\Debug\net5.0\build-gz\b+7RfQAf.gz
+C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\obj\Debug\net5.0\RazorDeclaration\Shared\TarefaIndividual.razor.g.cs
+C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\obj\Debug\net5.0\Razor\Shared\TarefaIndividual.razor.g.cs
