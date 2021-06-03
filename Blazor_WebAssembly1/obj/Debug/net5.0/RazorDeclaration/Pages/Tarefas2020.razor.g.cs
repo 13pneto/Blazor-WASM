@@ -90,40 +90,20 @@ using Blazor_WebAssembly1.Entities;
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Pages\Tarefas-2020.razor"
-using Blazor_WebAssembly1.Repositories;
+#line 2 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Pages\Tarefas2020.razor"
+using Blazor_WebAssembly1.Pages;
 
 #line default
 #line hidden
 #nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/tarefas")]
-    public partial class Tarefas_2020 : Microsoft.AspNetCore.Components.ComponentBase
+    public partial class Tarefas2020 : Tarefas2020Base
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
         {
         }
         #pragma warning restore 1998
-#nullable restore
-#line 7 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Pages\Tarefas-2020.razor"
-       
-
-    private List<Tarefa> tarefas = new List<Tarefa>();
-
-    protected override void OnInitialized()
-    {
-        tarefas = repository.GetTarefas();
-    }
-
-    private List<Tarefa> GetTarefas()
-    {
-        return tarefas;
-    }
-
-#line default
-#line hidden
-#nullable disable
-        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IRepository repository { get; set; }
     }
 }
 #pragma warning restore 1591
