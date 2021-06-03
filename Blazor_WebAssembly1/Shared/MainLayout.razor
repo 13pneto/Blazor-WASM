@@ -9,9 +9,19 @@
         <div class="top-row px-4">
             <a href="http://blazor.net" target="_blank" class="ml-md-auto">About</a>
         </div>
+        
+        <CascadingValue Name="BackgroundColor" Value="@BackgroundColor">
+            <CascadingValue Name="FontSize" Value="@FontSize">
+                <div class="content px-4">
+                    @Body
+                </div>
+            </CascadingValue>
+        </CascadingValue>
 
-        <div class="content px-4">
-            @Body
-        </div>
     </div>
 </div>
+
+@code{ 
+    private string BackgroundColor = "gray";
+    private string FontSize = "50px";
+}

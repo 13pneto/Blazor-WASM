@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace Blazor_WebAssembly1.Shared
+namespace Blazor_WebAssembly1.Pages
 {
     #line hidden
     using System;
@@ -89,7 +89,8 @@ using Blazor_WebAssembly1.Entities;
 #line default
 #line hidden
 #nullable disable
-    public partial class MainLayout : LayoutComponentBase
+    [Microsoft.AspNetCore.Components.RouteAttribute("/cascade-parameter")]
+    public partial class Cascade_Parameter : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -97,10 +98,10 @@ using Blazor_WebAssembly1.Entities;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 24 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Shared\MainLayout.razor"
+#line 8 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Pages\Cascade-Parameter.razor"
        
-    private string BackgroundColor = "gray";
-    private string FontSize = "50px";
+    [CascadingParameter(Name = "BackgroundColor")] string BackgroundColor { get; set; }
+    [CascadingParameter(Name = "FontSize")] string FontSize { get; set; }
 
 #line default
 #line hidden

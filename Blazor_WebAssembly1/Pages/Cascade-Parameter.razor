@@ -1,0 +1,11 @@
+﻿@page "/cascade-parameter"
+
+<div style="width: 500px; height: 500px; background-color: @BackgroundColor">
+    <h3>Cascade_Parameter</h3>
+</div>
+
+
+@code {
+    [CascadingParameter(Name = "BackgroundColor")] string BackgroundColor { get; set; }
+    [CascadingParameter(Name = "FontSize")] string FontSize { get; set; }
+}
