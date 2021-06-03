@@ -1191,19 +1191,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Pedro\\.nuget\\packages\\": {}
+    "C:\\Users\\User\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Pedro\\source\\repos\\Blazor_WebAssembly1\\Blazor_WebAssembly1\\Blazor_WebAssembly1.csproj",
+      "projectUniqueName": "C:\\Users\\User\\Documents\\Projetos\\Blazor-WASM\\Blazor_WebAssembly1\\Blazor_WebAssembly1.csproj",
       "projectName": "Blazor_WebAssembly1",
-      "projectPath": "C:\\Users\\Pedro\\source\\repos\\Blazor_WebAssembly1\\Blazor_WebAssembly1\\Blazor_WebAssembly1.csproj",
-      "packagesPath": "C:\\Users\\Pedro\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Pedro\\source\\repos\\Blazor_WebAssembly1\\Blazor_WebAssembly1\\obj\\",
+      "projectPath": "C:\\Users\\User\\Documents\\Projetos\\Blazor-WASM\\Blazor_WebAssembly1\\Blazor_WebAssembly1.csproj",
+      "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\User\\Documents\\Projetos\\Blazor-WASM\\Blazor_WebAssembly1\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Pedro\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\User\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -1260,7 +1260,7 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.NETCore.App.Runtime.browser-wasm",
-            "version": "[5.0.6, 5.0.6]"
+            "version": "[5.0.5, 5.0.5]"
           }
         ],
         "frameworkReferences": {
@@ -1268,7 +1268,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.300\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

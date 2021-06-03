@@ -21,10 +21,10 @@
 
                 <select @bind="BackgroundColor" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                     <option selected>Select color</option>
+                    <option value="">Default</option>
                     <option value="cyan">Cyan</option>
                     <option value="blue">Blue</option>
                     <option value="red">Red</option>
-                    <option value="">Default</option>
                 </select>
             </CascadingValue>
         </CascadingValue>
@@ -33,6 +33,6 @@
 </div>
 
 @code{ 
-    private string BackgroundColor = "cyan";
+    private string BackgroundColor;
     private string FontSize = "50px";
 }

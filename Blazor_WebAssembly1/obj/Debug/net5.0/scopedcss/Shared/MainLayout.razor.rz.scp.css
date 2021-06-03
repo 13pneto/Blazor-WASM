@@ -52,7 +52,7 @@
 
     .sidebar[b-luyt1lsbte] {
         width: 250px;
-        height: 100vh;
+        height: 100%;
         position: sticky;
         top: 0;
     }
