@@ -1,9 +1,12 @@
 ﻿@inherits LayoutComponentBase
 
 <div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+    <CascadingValue Value="@BackgroundColor">
+        <div class="sidebar">
+            <NavMenu />
+        </div>
+    </CascadingValue>
+
 
     <div class="main">
         <div class="top-row px-4">
@@ -15,6 +18,14 @@
                 <div class="content px-4">
                     @Body
                 </div>
+
+                <select @bind="BackgroundColor" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                    <option selected>Select color</option>
+                    <option value="cyan">Cyan</option>
+                    <option value="blue">Blue</option>
+                    <option value="red">Red</option>
+                    <option value="">Default</option>
+                </select>
             </CascadingValue>
         </CascadingValue>
 
@@ -22,6 +33,6 @@
 </div>
 
 @code{ 
-    private string BackgroundColor = "gray";
+    private string BackgroundColor = "cyan";
     private string FontSize = "50px";
 }

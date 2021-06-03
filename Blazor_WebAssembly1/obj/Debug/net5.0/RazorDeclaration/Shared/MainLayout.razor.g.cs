@@ -97,9 +97,9 @@ using Blazor_WebAssembly1.Entities;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 24 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Shared\MainLayout.razor"
+#line 35 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Shared\MainLayout.razor"
        
-    private string BackgroundColor = "gray";
+    private string BackgroundColor = "cyan";
     private string FontSize = "50px";
 
 #line default

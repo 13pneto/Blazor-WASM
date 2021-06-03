@@ -111,6 +111,14 @@ using Blazor_WebAssembly1.Entities;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 79 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Shared\NavMenu.razor"
+      
+    [CascadingParameter] string NavBarColor { get; set; }
+
+#line default
+#line hidden
+#nullable disable
     }
 }
 #pragma warning restore 1591
