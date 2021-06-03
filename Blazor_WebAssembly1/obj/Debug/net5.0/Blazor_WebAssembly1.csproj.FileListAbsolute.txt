@@ -1310,9 +1310,11 @@ C:\Users\User\Documents\Projetos\Blazor-WASM\Blazor_WebAssembly1\obj\Debug\net5.
 C:\Users\User\Documents\Projetos\Blazor-WASM\Blazor_WebAssembly1\obj\Debug\net5.0\Razor\Pages\8-LifeCycle.razor.g.cs
 C:\Users\User\Documents\Projetos\Blazor-WASM\Blazor_WebAssembly1\obj\Debug\net5.0\RazorDeclaration\Pages\9-DI.razor.g.cs
 C:\Users\User\Documents\Projetos\Blazor-WASM\Blazor_WebAssembly1\obj\Debug\net5.0\Razor\Pages\9-DI.razor.g.cs
-C:\Users\User\Documents\Projetos\Blazor-WASM\Blazor_WebAssembly1\obj\Debug\net5.0\RazorDeclaration\Pages\10-Admin.razor.g.cs
 C:\Users\User\Documents\Projetos\Blazor-WASM\Blazor_WebAssembly1\obj\Debug\net5.0\RazorDeclaration\Pages\11-Cascade-Parameter.razor.g.cs
 C:\Users\User\Documents\Projetos\Blazor-WASM\Blazor_WebAssembly1\obj\Debug\net5.0\RazorDeclaration\Pages\10.1-Users-Admin.razor.g.cs
-C:\Users\User\Documents\Projetos\Blazor-WASM\Blazor_WebAssembly1\obj\Debug\net5.0\Razor\Pages\10-Admin.razor.g.cs
 C:\Users\User\Documents\Projetos\Blazor-WASM\Blazor_WebAssembly1\obj\Debug\net5.0\Razor\Pages\10.1-Users-Admin.razor.g.cs
 C:\Users\User\Documents\Projetos\Blazor-WASM\Blazor_WebAssembly1\obj\Debug\net5.0\Razor\Pages\11-Cascade-Parameter.razor.g.cs
+C:\Users\User\Documents\Projetos\Blazor-WASM\Blazor_WebAssembly1\obj\Debug\net5.0\RazorDeclaration\Pages\Arbitrary-Parameters.razor.g.cs
+C:\Users\User\Documents\Projetos\Blazor-WASM\Blazor_WebAssembly1\obj\Debug\net5.0\Razor\Pages\Arbitrary-Parameters.razor.g.cs
+C:\Users\User\Documents\Projetos\Blazor-WASM\Blazor_WebAssembly1\obj\Debug\net5.0\RazorDeclaration\Pages\Admin.razor.g.cs
+C:\Users\User\Documents\Projetos\Blazor-WASM\Blazor_WebAssembly1\obj\Debug\net5.0\Razor\Pages\Admin.razor.g.cs

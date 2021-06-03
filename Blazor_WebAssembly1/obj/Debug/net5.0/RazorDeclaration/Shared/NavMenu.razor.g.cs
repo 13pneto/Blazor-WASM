@@ -97,7 +97,7 @@ using Blazor_WebAssembly1.Entities;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 68 "C:\Users\User\Documents\Projetos\Blazor-WASM\Blazor_WebAssembly1\Shared\NavMenu.razor"
+#line 73 "C:\Users\User\Documents\Projetos\Blazor-WASM\Blazor_WebAssembly1\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 
@@ -112,7 +112,7 @@ using Blazor_WebAssembly1.Entities;
 #line hidden
 #nullable disable
 #nullable restore
-#line 79 "C:\Users\User\Documents\Projetos\Blazor-WASM\Blazor_WebAssembly1\Shared\NavMenu.razor"
+#line 84 "C:\Users\User\Documents\Projetos\Blazor-WASM\Blazor_WebAssembly1\Shared\NavMenu.razor"
       
     [CascadingParameter] string NavBarColor { get; set; }
 

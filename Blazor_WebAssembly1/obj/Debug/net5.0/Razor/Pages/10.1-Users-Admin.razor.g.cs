@@ -86,7 +86,7 @@ using Blazor_WebAssembly1.Entities;
 #line default
 #line hidden
 #nullable disable
-    [Microsoft.AspNetCore.Components.LayoutAttribute(typeof(_10_1_Users_Admin))]
+    [Microsoft.AspNetCore.Components.LayoutAttribute(typeof(Admin))]
     [Microsoft.AspNetCore.Components.RouteAttribute("/admin")]
     public partial class _10_1_Users_Admin : Microsoft.AspNetCore.Components.ComponentBase
     {

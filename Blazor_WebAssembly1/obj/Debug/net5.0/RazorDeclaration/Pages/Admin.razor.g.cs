@@ -90,7 +90,7 @@ using Blazor_WebAssembly1.Entities;
 #line hidden
 #nullable disable
     [Microsoft.AspNetCore.Components.LayoutAttribute(typeof(MainLayout))]
-    public partial class _10_Admin : LayoutComponentBase
+    public partial class Admin : LayoutComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)

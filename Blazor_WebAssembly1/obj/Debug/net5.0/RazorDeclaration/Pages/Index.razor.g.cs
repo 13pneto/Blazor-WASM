@@ -98,7 +98,7 @@ using Blazor_WebAssembly1.Entities;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 9 "C:\Users\User\Documents\Projetos\Blazor-WASM\Blazor_WebAssembly1\Pages\Index.razor"
+#line 13 "C:\Users\User\Documents\Projetos\Blazor-WASM\Blazor_WebAssembly1\Pages\Index.razor"
        
 
     private string Mensagem { get; set; } = "Olá Pedro";

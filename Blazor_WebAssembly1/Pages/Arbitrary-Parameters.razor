@@ -1,0 +1,31 @@
+﻿@page "/arbitrary-parameters"
+    <div class="text-center">
+        <h3>Bem-Vindo a loja X</h3>
+    </div>
+
+<hr />
+
+    <div class="container">
+        <ul class="row" style="list-style: none;">
+            <li class="col-md-4 col-sm-12">
+                <div class="card" style="width: 18rem;">
+                    <img class="card-img-top" src="img/pizza-calabresa.jpeg" alt="Sabor Calabresa" @attributes="ParametersImg">
+                    <div class="card-body">
+                        <h5 class="card-title">@ProductTitle</h5>
+                        <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua</p>
+                        <a href="#" class="btn btn-primary">Detalhes</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+
+
+
+    @code {
+        [Parameter] public string ProductTitle { get; set; } = "Pizza Calabresa";
+
+        [Parameter(CaptureUnmatchedValues = true)] public Dictionary<string, object> ParametersImg { get; set; }
+
+    }
