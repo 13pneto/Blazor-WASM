@@ -105,7 +105,6 @@ using Blazor_WebAssembly1.Entities;
     [Parameter] public string ButtonConfirmText { get; set; } = "Confirmar";
     [Parameter] public RenderFragment ChildContent { get; set; }
     [Parameter] public EventCallback OnConfirm { get; set; }
-    [Parameter] public EventCallback OnCancel { get; set; }
 
     public void Show() => ShowModal = true;
     public void Hide() => ShowModal = false;
