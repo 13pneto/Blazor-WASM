@@ -97,7 +97,7 @@ using Blazor_WebAssembly1.Entities;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 70 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Shared\Tarefas.razor"
+#line 90 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Shared\Tarefas.razor"
        
 
 
@@ -105,6 +105,8 @@ using Blazor_WebAssembly1.Entities;
     [Parameter] public List<Tarefa> tarefas { get; set; }
 
     private string novaTarefa;
+    Modal modal = new Modal();
+    Tarefa tarefaRemover;
 
     private void AdicionarNovaTarefa()
     {
@@ -122,7 +124,20 @@ using Blazor_WebAssembly1.Entities;
 
     private void RemoveTarefa(Tarefa tarefa)
     {
-        tarefas.Remove(tarefa);
+        modal.Show();
+        tarefaRemover = tarefa;
+    }
+
+    private void RemoveTarefaConfirm()
+    {
+        tarefas.Remove(tarefaRemover);
+        tarefaRemover = null;
+        modal.Hide();
+    }
+
+    private void RemoveTarefaCancel()
+    {
+        modal.Hide();
     }
 
     private bool VerificaTarefaJaExiste(string tarefaDescricao)

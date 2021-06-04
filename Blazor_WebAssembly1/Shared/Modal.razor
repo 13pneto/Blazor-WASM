@@ -1,0 +1,38 @@
+﻿@if (ShowModal)
+{
+    <div class="modal-backdrop show"></div>
+
+    <div class="modal" tabindex="-1" role="dialog"
+         aria-hidde="true" style="display: block;">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">@ModalTitle</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" @onclick="OnCancel">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    @ChildContent
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" @onclick="OnConfirm">@ButtonConfirmText</button>
+                    <button type="button" class="btn btn-secondary" @onclick="OnCancel" data-dismiss="modal">Fechar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+@code {
+    private bool ShowModal { get; set; } = false;
+
+    [Parameter] public string ModalTitle { get; set; } = "Confirmação";
+    [Parameter] public string ButtonConfirmText { get; set; } = "Confirmar";
+    [Parameter] public RenderFragment ChildContent { get; set; }
+    [Parameter] public EventCallback OnConfirm { get; set; }
+    [Parameter] public EventCallback OnCancel { get; set; }
+
+    public void Show() => ShowModal = true;
+    public void Hide() => ShowModal = false;
+
+}

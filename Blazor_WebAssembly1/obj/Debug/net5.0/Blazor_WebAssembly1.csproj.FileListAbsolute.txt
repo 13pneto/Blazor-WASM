@@ -1320,3 +1320,5 @@ C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\obj\Debug\ne
 C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\obj\Debug\net5.0\Razor\Pages\8-LifeCycle.razor.g.cs
 C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\obj\Debug\net5.0\Razor\Pages\9-DI.razor.g.cs
 C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\obj\Debug\net5.0\Razor\Pages\Arbitrary-Parameters.razor.g.cs
+C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\obj\Debug\net5.0\RazorDeclaration\Shared\Modal.razor.g.cs
+C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\obj\Debug\net5.0\Razor\Shared\Modal.razor.g.cs
