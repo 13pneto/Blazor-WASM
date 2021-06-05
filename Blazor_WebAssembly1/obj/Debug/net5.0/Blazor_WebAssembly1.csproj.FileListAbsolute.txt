@@ -1322,3 +1322,16 @@ C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\obj\Debug\ne
 C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\obj\Debug\net5.0\Razor\Pages\Arbitrary-Parameters.razor.g.cs
 C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\obj\Debug\net5.0\RazorDeclaration\Shared\Modal.razor.g.cs
 C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\obj\Debug\net5.0\Razor\Shared\Modal.razor.g.cs
+C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\bin\Debug\net5.0\wwwroot\_framework\Blazored.LocalStorage.dll.gz
+C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\bin\Debug\net5.0\wwwroot\_framework\Bunit.Core.dll.gz
+C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.dll.gz
+C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\bin\Debug\net5.0\wwwroot\_framework\Blazored.LocalStorage.dll
+C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\bin\Debug\net5.0\wwwroot\_framework\Bunit.Core.dll
+C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\bin\Debug\net5.0\wwwroot\_framework\Microsoft.AspNetCore.Components.Authorization.dll
+C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\obj\Debug\net5.0\RazorDeclaration\Pages\12-LocalStorage.razor.g.cs
+C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\obj\Debug\net5.0\Razor\Pages\12-LocalStorage.razor.g.cs
+C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\obj\Debug\net5.0\build-gz\N40UgWy+.gz
+C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\obj\Debug\net5.0\build-gz\RQOjGinI.gz
+C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\obj\Debug\net5.0\build-gz\ax3fm9La.gz
+C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\obj\Debug\net5.0\RazorDeclaration\Shared\Product.razor.g.cs
+C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\obj\Debug\net5.0\Razor\Shared\Product.razor.g.cs

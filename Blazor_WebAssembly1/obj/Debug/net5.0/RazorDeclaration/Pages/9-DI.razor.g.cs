@@ -90,6 +90,13 @@ using Blazor_WebAssembly1.Entities;
 #line hidden
 #nullable disable
 #nullable restore
+#line 15 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\_Imports.razor"
+using Blazored.LocalStorage;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 2 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Pages\9-DI.razor"
 using Blazor_WebAssembly1.Services;
 
@@ -105,7 +112,7 @@ using Blazor_WebAssembly1.Services;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 17 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Pages\9-DI.razor"
+#line 18 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Pages\9-DI.razor"
        
 
 

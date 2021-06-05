@@ -1,0 +1,26 @@
+﻿@*<div class="container">*@
+    @*<ul class="row" style="list-style: none;">*@
+        <li class="col-md-4 col-sm-12">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="@ImageURL" alt="Sabor Calabresa">
+                <div class="card-body">
+                    <h5 class="card-title">@ProductTitle</h5>
+                    <p class="card-text">@ProductDescription</p>
+                    <a href="@DetailURl" class="btn btn-primary">Detalhes</a>
+                    <button href="" class="btn btn-success" @onclick="@(() => AddCart.InvokeAsync(ProductToAdd))">Carrinho</button>
+                </div>
+            </div>
+        </li>
+    @*</ul>*@
+@*</div>*@
+
+
+@code {
+    [Parameter] public Entities.Product ProductToAdd{ get; set; }
+    [Parameter] public string ImageURL { get; set; } = "img/pizza-calabresa.jpeg";
+    [Parameter] public string ProductTitle { get; set; } = "Produto";
+    [Parameter] public string ProductDescription { get; set; } = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua";
+    [Parameter] public string DetailURl { get; set; } = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua";
+
+    [Parameter] public EventCallback<Entities.Product> AddCart { get; set; }
+}

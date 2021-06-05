@@ -86,6 +86,13 @@ using Blazor_WebAssembly1.Entities;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 15 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\_Imports.razor"
+using Blazored.LocalStorage;
+
+#line default
+#line hidden
+#nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/cascade-parameter")]
     public partial class _11_Cascade_Parameter : Microsoft.AspNetCore.Components.ComponentBase
     {

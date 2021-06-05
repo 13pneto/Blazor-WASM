@@ -89,6 +89,13 @@ using Blazor_WebAssembly1.Entities;
 #line default
 #line hidden
 #nullable disable
+#nullable restore
+#line 15 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\_Imports.razor"
+using Blazored.LocalStorage;
+
+#line default
+#line hidden
+#nullable disable
     public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -97,7 +104,7 @@ using Blazor_WebAssembly1.Entities;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 73 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Shared\NavMenu.razor"
+#line 78 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Shared\NavMenu.razor"
        
     private bool collapseNavMenu = true;
 
@@ -112,7 +119,7 @@ using Blazor_WebAssembly1.Entities;
 #line hidden
 #nullable disable
 #nullable restore
-#line 84 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Shared\NavMenu.razor"
+#line 89 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Shared\NavMenu.razor"
       
     [CascadingParameter] string NavBarColor { get; set; }
 

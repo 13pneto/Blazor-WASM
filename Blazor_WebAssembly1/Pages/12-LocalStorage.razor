@@ -1,0 +1,73 @@
+﻿@page "/local-storage"
+@using  Blazor_WebAssembly1.Repositories
+@using Newtonsoft.Json
+@inject Blazored.LocalStorage.ILocalStorageService localStorage
+@inject IRepositoryProduct repository
+
+<div class="container">
+    <ul class="row" style="list-style: none;">
+        @foreach (var product in products)
+        {
+            <Product ProductToAdd="product" AddCart="AddToCart" ImageURL="@product.ImageURL" DetailURl="@product.DetailURL" ProductDescription="@product.ProductDescription" ProductTitle="@product.ProductTitle"></Product>
+        }
+    </ul>
+    <div class="col-md-3">
+        @productsInChart.Count();
+        <hr />
+        @if (productsInChart.Count > 0)
+        {
+            <table class="table">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Produto</th>
+                        <th scope="col">Descrição</th>
+                        <th scope="col">Detalhes</th>
+                    </tr>
+                </thead>
+                @foreach (var item in productsInChart)
+                {
+                    <tbody>
+                        <tr>
+                            <td scope="row">@item.ProductTitle</td>
+                            <td>@item.ProductDescription</td>
+                            <td><a href="@item.DetailURL">@item.DetailURL</a></td>
+                        </tr>
+                    </tbody>
+                }
+            </table>
+            <button class="btn btn-danger" @onclick="ClearChart">Limpar</button>
+        }
+    </div>
+</div>
+
+@code {
+    public List<Entities.Product> products = new List<Entities.Product>();
+    public List<Entities.Product> productsInChart = new List<Entities.Product>();
+
+    const string key = "product";
+
+    protected async override Task OnInitializedAsync()
+    {
+        products = await repository.GetProducts();
+
+
+        bool hasLocalStorageItems = await localStorage.ContainKeyAsync(key);
+        if (hasLocalStorageItems)
+        {
+            productsInChart = await localStorage.GetItemAsync<List<Entities.Product>>(key); //LocalStorage
+        }
+    }
+
+    public async void AddToCart(Entities.Product product)
+    {
+        productsInChart.Add(product);
+        await localStorage.SetItemAsync(key, productsInChart);
+    }
+
+    public async void ClearChart()
+    {
+        productsInChart = new List<Entities.Product>();
+        await localStorage.ClearAsync();
+    }
+
+}

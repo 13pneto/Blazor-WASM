@@ -87,6 +87,13 @@ using Blazor_WebAssembly1.Entities;
 #line hidden
 #nullable disable
 #nullable restore
+#line 15 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\_Imports.razor"
+using Blazored.LocalStorage;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
 #line 3 "C:\Users\Pedro\source\repos\Blazor_WebAssembly1\Blazor_WebAssembly1\Pages\7-EventKeyPress.razor"
 using Newtonsoft.Json;
 
